@@ -55,7 +55,7 @@ server <- shinyServer(function(input, output){
                         numberWords <- length(wordBreakDown)
                         scoreTable <- data.frame()
                         if(numberWords == 0){
-                                return('^_^')
+                                return(as.character('?????'))
                         } else if(numberWords >= 1){
                                 # match 4 words with nGramData
                                 if (numberWords > 4){

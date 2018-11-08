@@ -22,7 +22,7 @@ ui <- shinyUI(
                                 fluidRow(column(12, align="center",
                                         div(style = "font-size:16px; color:#707B7C; padding:20px;","Top predicted next word:"))),
                                 fluidRow(column(12, align="center",
-                                        actionButton(style="font-weight:normal; color: #202121; background-color: #D7DDE3; font-size: 16px","button",
+                                        actionButton(style="font-weight:normal; color: #202121; background-color: #D7DDE3; font-size: 16px; text-transform: lowercase","button",
                                                 textOutput('predict'))))
                                 #fluidRow(column(12, align="center",
                                 #        div(style = "font-weight:bold; font-size:22px; color:#2471A3; font-family:courier new", 

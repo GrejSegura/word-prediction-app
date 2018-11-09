@@ -47,8 +47,8 @@ ui <- shinyUI(
 
 
 server <- shinyServer(function(input, output){
-        observeEvent(input$button,
-                {output$predict <- renderText({
+        
+                predict <- reactiveValues({
                         sentence <- input$searchBar
                         wordBreakDown <- unlist(replaceText(sentence))
                         wordBreakDown <- strsplit(wordBreakDown, split = " ")[[1]]
@@ -75,13 +75,11 @@ server <- shinyServer(function(input, output){
                                         if (nrow(scoreTable) < 5){
                                                 addUniGram <- as.data.frame(unigramData[1:(5-nrow(scoreTable)), c('nextWord')])
                                                 scoreTable <- as.data.frame(full_join(scoreTable, addUniGram, by = 'nextWord'))
-                                                return(as.character(unlist(scoreTable[1, c('nextWord')])))
                                         }
-                                        return(as.character(unlist(scoreTable[1, c('nextWord')])))
                                 }
                         }
                 })
-        })
+        
 })                        
 
 shinyApp(ui = ui, server = server)

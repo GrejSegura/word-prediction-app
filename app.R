@@ -48,14 +48,14 @@ ui <- shinyUI(
 
 server <- shinyServer(function(input, output){
         
-                predictTable <- reactiveValues({
+                predictTable <- reactive({
                         sentence <- input$searchBar
                         wordBreakDown <- unlist(replaceText(sentence))
                         wordBreakDown <- strsplit(wordBreakDown, split = " ")[[1]]
                         numberWords <- length(wordBreakDown)
                         scoreTable <- data.frame()
                         if(numberWords == 0){
-                                return(as.character('?????'))
+                                scoreTable <- as.character('?????')
                         } else if(numberWords >= 1){
                                 # match 4 words with nGramData
                                 if (numberWords > 4){
@@ -75,16 +75,17 @@ server <- shinyServer(function(input, output){
                                         if (nrow(scoreTable) < 5){
                                                 addUniGram <- as.data.frame(unigramData[1:(5-nrow(scoreTable)), c('nextWord')])
                                                 scoreTable <- as.data.frame(full_join(scoreTable, addUniGram, by = 'nextWord'))
-                                                return(scoreTable)
+                                                return(scoreTable[1:5, c('nextWord')])
                                         }
-                                        return(scoreTable)
+                                        return(scoreTable[1:5, c('nextWord')])
                                 }
                         }
                 })
-                output$predict <- renderText({
-                        return(as.character(unlist(predictTable())))
+                observeEvent(input$button1,
+                        {output$predict <- renderText({
+                                return(as.character(unlist(predictTable())))
+                        })
                 })
-        
 })                        
 
 shinyApp(ui = ui, server = server)

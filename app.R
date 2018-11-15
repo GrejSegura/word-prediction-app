@@ -1,4 +1,6 @@
 source("./src/replaceText.R")
+source("./src/tabPanel2Content.R")
+
 
 nGramData <- fread('./dta/nGramData.csv')
 unigramData <- readRDS('./dta/unigram.RData')

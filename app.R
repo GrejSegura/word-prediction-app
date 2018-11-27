@@ -1,3 +1,4 @@
+
 source("./src/replaceText.R")
 source("./src/tabPanel2Content.R")
 
@@ -12,30 +13,52 @@ ui <- shinyUI(
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:20px;"))),
                                 fluidRow(column(12, align="center",
+                                        h4(" ", style="padding:20px;"))),
+                                fluidRow(column(12, align="center",
                                         img(src='logo.png', align='center', width = 450, height = 180))),
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:20px;"))),
                                 fluidRow(column(12, align="center",
                                         h6(" "))),
                                 fluidRow(column(12, align="center",
-                                        textInput(inputId ='searchBar', label = div(style = "font-weight: normal; font-size:16px; color:#707B7C",'Type a phrase here (English only):'), value = '', width = '600px'))),
+                                        textInput(inputId ='searchBar', label = div(style = "font-weight: normal; font-size:16px; 
+                                                                                    color:#8597AB; font-family:Segoe UI",'Type a phrase here :'), value = '', width = '600px'))),
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:20px;"))),
                                 fluidRow(column(12, align="center",
-                                        div(style = "font-size:16px; color:#707B7C; padding:20px;","Top predicted next word:"))),
+                                        div(style = "; font-family:Segoe UI; font-size:16px; color:#8597AB; padding:20px;","Top predicted next word :"))),
                                 #fluidRow(column(12, align="center", textOutput('predict')))
                                 fluidRow(column(12, align="center",
-                                        div(style = "font-weight:bold; font-size:22px; color:#2471A3; font-family:courier new", 
-                                            textOutput("predict"))))
+                                        div(style = "font-weight:bold; font-size:22px; color:#2471A3; font-family:Segoe UI", 
+                                            textOutput("predict")))),
+                                fluidRow(column(12, align="center",
+                                                h4(" ", style="padding:20px;"))),
+                                fluidRow(column(12, align="center",
+                                                h4(" ", style="padding:20px;"))),
+                                fluidRow(column(12, align="center",
+                                                h4(" ", style="padding:20px;"))),
+                                fluidRow(column(width = 12, align="center", style="padding:1px",
+                                                div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
+                                                    'Created by :'))),
+                                fluidRow(column(width = 12, align="center", style="padding:1px",
+                                                div(
+                                                     tags$a(style = "font-weight:normal; font-size:10px; font-family:Segoe UI; color:#3681DA",
+                                                            href = 'https://www.linkedin.com/in/grejell-segura-13009a15/','Grejell B. Segura')))),
+                                fluidRow(column(12, align="center",
+                                                h4(" ", style="padding:5px;"))),
+                                fluidRow(column(width = 12, align="center", style="padding:1px",
+                                                div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
+                                                    'Powered by :'))),
+                                fluidRow(column(12, align="center",
+                                                img(src='rstudio.png', align='center', width = 80, height = 28)))
                                 ),  #this closes the tabPanel1
-                        tabPanel(div(style = "font-weight:normal; font-size:12px; color:#2471A3", 'About the App'),
-                                 fluidRow(column(12, align="center",
-                                        img(src='logo.png', align='center', width = 400, height = 160))),
-                                 fluidRow(column(12, align="center",
-                                                 h4(" ", style="padding:20px;"))),
-                                 fluidRow(column(12, align="center",
-                                        div(style = "font-weight:bold; font-size:22px; color:#2471A3; font-family:courier new", 
-                                            "This page is currently under construction!")))
+                        tabPanel(    
+                                div(style = "font-family:Segoe UI; font-weight:normal; font-size:12px; color:#2471A3", 'About the App'),
+                                        fluidRow(column(12, align="center",
+                                                img(src='logo.png', align='center', width = 400, height = 160))),
+                                        fluidRow(column(12, align="center",
+                                                h4(" ", style="padding:20px;"))),
+                                        tabContent
                                  ) #this closes the tabPanel2
                         ) #this closes the tabsetPanels
                 ) #this closes the fluidPage

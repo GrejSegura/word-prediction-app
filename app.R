@@ -54,7 +54,7 @@ server <- shinyServer(function(input, output){
                         numberWords <- length(wordBreakDown)
                         scoreTable <- data.frame()
                         if(numberWords == 0){
-                                return(as.character('?????'))
+                                return(as.character('Type a phrase first!'))
                         } else if(numberWords >= 1){
                                 # match 4 words with nGramData
                                 if (numberWords > 4){
@@ -74,9 +74,9 @@ server <- shinyServer(function(input, output){
                                         if (nrow(scoreTable) < 5){
                                                 addUniGram <- as.data.frame(unigramData[1:(5-nrow(scoreTable)), c('nextWord')])
                                                 scoreTable <- as.data.frame(full_join(scoreTable, addUniGram, by = 'nextWord'))
-                                                return(as.character(unlist(scoreTable[1:3, c('nextWord')])))
+                                                return(as.character(unlist(scoreTable[1:3, c('nextWord')]))) #return the top 3 words
                                         }
-                                        return(as.character(unlist(scoreTable[1:3, c('nextWord')])))
+                                        return(as.character(unlist(scoreTable[1:3, c('nextWord')]))) #return the top 3 words
                                 }
                         }
                 })

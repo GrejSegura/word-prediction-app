@@ -15,18 +15,19 @@ ui <- shinyUI(
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:20px;"))),
                                 fluidRow(column(12, align="center",
-                                        img(src='logo.png', align='center', width = 450, height = 180))),
+                                        img(src='logo2.png', align='center', width = 450, height = 169))),
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:20px;"))),
                                 fluidRow(column(12, align="center",
                                         h6(" "))),
                                 fluidRow(column(12, align="center",
-                                        textInput(inputId ='searchBar', label = div(style = "font-weight: normal; font-size:16px; 
-                                                                                    color:#8597AB; font-family:Segoe UI",'Type a phrase here :'), value = '', width = '600px'))),
+                                        textInput(inputId ='searchBar', 
+                                                label = div(style = "font-weight: normal; font-size:16px; 
+                                                        color:#8597AB; font-family:Arial",'Type a phrase here :'), value = '', width = '600px'))),
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:20px;"))),
                                 fluidRow(column(12, align="center",
-                                        div(style = "; font-family:Segoe UI; font-size:16px; color:#8597AB; padding:20px;","Top predicted next word :"))),
+                                        div(style = "; font-family:Arial; font-size:16px; color:#8597AB; padding:20px;","Top predicted next word :"))),
                                 #fluidRow(column(12, align="center", textOutput('predict')))
                                 fluidRow(column(12, align="center",
                                         div(style = "font-weight:bold; font-size:22px; color:#2471A3; font-family:Segoe UI", 
@@ -55,7 +56,7 @@ ui <- shinyUI(
                         tabPanel(    
                                 div(style = "font-family:Segoe UI; font-weight:normal; font-size:12px; color:#2471A3", 'About the App'),
                                         fluidRow(column(12, align="center",
-                                                img(src='logo.png', align='center', width = 400, height = 160))),
+                                                img(src='logo2.png', align='center', width = 400, height = 150))),
                                         fluidRow(column(12, align="center",
                                                 h4(" ", style="padding:20px;"))),
                                         tabContent

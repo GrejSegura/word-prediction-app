@@ -7,7 +7,7 @@ tabContent <- fluidRow(column(width = 6, offset = 3, align="justified",
                                 'This app was built as a Capstone Project for Data Science Specialization Course offered by www.coursera.org.
                                 I named this particular app as Word Suggest. 
                                 It uses the stupid backoff algorithm in the backend to calculate the predictions.
-                                The app accepts an English phrase as input and takes the last 4 words to predict the next word.
+                                It accepts an English phrase as input and takes the last 4 words to predict the next word.
                                 The top 3 most likely next word is then displayed in the bottom.
                                 The user may choose one of the words as the next word for the phrase or may type any other word.
                                 The process continues as long as the user wants.'),

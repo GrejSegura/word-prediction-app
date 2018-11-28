@@ -11,15 +11,11 @@ ui <- shinyUI(
                 tabsetPanel(
                         tabPanel(div(style = "font-weight:normal; font-size:12px; color:#2471A3", 'Home'),
                                 fluidRow(column(12, align="center",
-                                        h4(" ", style="padding:20px;"))),
-                                fluidRow(column(12, align="center",
-                                        h4(" ", style="padding:20px;"))),
+                                        h4(" ", style="padding:40px;"))),
                                 fluidRow(column(12, align="center",
                                         img(src='logo2.png', align='center', width = 450, height = 169))),
                                 fluidRow(column(12, align="center",
-                                        h4(" ", style="padding:20px;"))),
-                                fluidRow(column(12, align="center",
-                                        h6(" "))),
+                                        h4(" ", style="padding:30px;"))),
                                 fluidRow(column(12, align="center",
                                         textInput(inputId ='searchBar', 
                                                 label = div(style = "font-weight: normal; font-size:16px; 
@@ -31,35 +27,30 @@ ui <- shinyUI(
                                 #fluidRow(column(12, align="center", textOutput('predict')))
                                 fluidRow(column(12, align="center",
                                         div(style = "font-weight:bold; font-size:22px; color:#2471A3; font-family:Segoe UI", 
-                                            textOutput("predict")))),
+                                                textOutput("predict")))),
                                 fluidRow(column(12, align="center",
-                                                h4(" ", style="padding:20px;"))),
-                                fluidRow(column(12, align="center",
-                                                h4(" ", style="padding:20px;"))),
-                                fluidRow(column(12, align="center",
-                                                h4(" ", style="padding:20px;"))),
+                                        h4(" ", style="padding:80px;"))),
                                 fluidRow(column(width = 12, align="center", style="padding:1px",
-                                                div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
-                                                    'Created by :'))),
+                                        div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
+                                                'Created by :'))),
                                 fluidRow(column(width = 12, align="center", style="padding:1px",
-                                                div(
-                                                     tags$a(style = "font-weight:normal; font-size:10px; font-family:Segoe UI; color:#3681DA",
-                                                            href = 'https://www.linkedin.com/in/grejell-segura-13009a15/','Grejell B. Segura')))),
+                                        div(
+                                                tags$a(style = "font-weight:normal; font-size:10px; font-family:Segoe UI; color:#3681DA",
+                                                        href = 'https://www.linkedin.com/in/grejell-segura-13009a15/','Grejell B. Segura')))),
                                 fluidRow(column(12, align="center",
-                                                h4(" ", style="padding:5px;"))),
+                                        h4(" ", style="padding:5px;"))),
                                 fluidRow(column(width = 12, align="center", style="padding:1px",
-                                                div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
-                                                    'Powered by :'))),
+                                        div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
+                                                'Powered by :'))),
                                 fluidRow(column(12, align="center",
-                                                img(src='rstudio.png', align='center', width = 80, height = 28)))
+                                        img(src='rstudio.png', align='center', width = 80, height = 28)))
                                 ),  #this closes the tabPanel1
-                        tabPanel(    
-                                div(style = "font-family:Segoe UI; font-weight:normal; font-size:12px; color:#2471A3", 'About the App'),
-                                        fluidRow(column(12, align="center",
-                                                img(src='logo2.png', align='center', width = 400, height = 150))),
-                                        fluidRow(column(12, align="center",
-                                                h4(" ", style="padding:20px;"))),
-                                        tabContent
+                        tabPanel(div(style = "font-family:Segoe UI; font-weight:normal; font-size:12px; color:#2471A3", 'About the App'),
+                                fluidRow(column(12, align="center", style="padding:10px;",
+                                        img(src='logo2.png', align='center', width = 400, height = 150))),
+                                fluidRow(column(12, align="center",
+                                        h4(" ", style="padding:10px;"))),
+                                        tabContent # function located in tabPanel2Content.R
                                  ) #this closes the tabPanel2
                         ) #this closes the tabsetPanels
                 ) #this closes the fluidPage
@@ -104,6 +95,6 @@ server <- shinyServer(function(input, output){
                                 }
                         }
                 })
-})                        
+        })                        
 
 shinyApp(ui = ui, server = server)

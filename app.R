@@ -90,9 +90,9 @@ server <- shinyServer(function(input, output){
                                         if (nrow(scoreTable) < 5){
                                                 addUniGram <- as.data.frame(unigramData[1:(5-nrow(scoreTable)), c('nextWord')])
                                                 scoreTable <- as.data.frame(full_join(scoreTable, addUniGram, by = 'nextWord'))
-                                                return(as.character(unlist(scoreTable[1:3, c('nextWord')]))) #return the top 3 words
+                                                return(as.character(unlist(scoreTable[1, c('nextWord')]))) #return the top 3 words
                                         }
-                                        return(as.character(unlist(scoreTable[1:3, c('nextWord')]))) #return the top 3 words
+                                        return(as.character(unlist(scoreTable[1, c('nextWord')]))) #return the top 3 words
                                 }
                         }
                 })

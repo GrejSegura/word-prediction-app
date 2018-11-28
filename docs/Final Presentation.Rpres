@@ -58,6 +58,24 @@ include_graphics(img2)
     
 - The app's interface is very user friendly. 
 - A text input is placed in the middle. 
-- As the user types the phrase in the input, the algorithm provides the top 3 predicted words right after. 
+- As the user types the phrase in the input, the algorithm provides the top predicted word right after. 
 - The user may choose to select one of the words or type another word. 
 - The process continues for as long as the user wants.
+
+
+Challenges and Solution
+========================================================
+
+There are a number of challenges encountered during this project. Below are the accounts of the 2 most challenging circumstance and the solutions taken.
+
+- The data is too big to process in a normal home computer.
+
+Solution:
+
+Randomly chose 10% of the data. These expedites computation process and reduce the bias.
+
+- The algorithm needs to be fast.
+
+Solution:
+
+Stupid backoff algorithm was chosen as the main algorithm as it provides the prediction the fastest.

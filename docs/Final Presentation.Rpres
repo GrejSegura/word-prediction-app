@@ -38,11 +38,11 @@ Process and Algorithm
 ========================================================
 Since the raw data is too big to process, an extensive data process has to be executed. The following are the key points of the data process:
 
-1. I decided to randomly use 30% of the append news, blogs, and twitter data to minimize the memory and computing requirement.
+1. I decided to randomly use 20% of the appended news, blogs, and twitter data to minimize the memory and computing requirement.
 2. The data was tokenized up to 5-grams.
 3. A data corpus was made based on the n-grams while another data was extracted on the most popular words found.
 4. The corpus was used for the stupid backoff algorithm while the most popular words are used as predictions for those instances when the stupid backoff algorithm does not provide a prediction.
-5. The corpus is made up of 12,735,306 rows of n-grams and occupies 226mb of memory as a csv file.
+5. The corpus is made up of 4,132,251 rows of n-grams and occupies just around 30mb of memory.
 
 Interface
 ========================================================

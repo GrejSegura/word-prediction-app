@@ -3,7 +3,7 @@ source("./src/replaceText.R")
 source("./src/tabPanel2Content.R")
 
 
-nGramData <- setDT(readRDS('./dta/nGramData.RData'))
+nGramData <- readRDS('./dta/nGramData.RData')
 unigramData <- readRDS('./dta/unigram.RData')
 
 ui <- shinyUI(
@@ -19,32 +19,33 @@ ui <- shinyUI(
                                 fluidRow(column(12, align="center",
                                         textInput(inputId ='searchBar', 
                                                 label = div(style = "font-weight: normal; font-size:16px; 
-                                                        color:#8597AB; font-family:Arial",'Type a phrase here :'), value = '', width = '600px'))),
+                                                        color:#8597AB; font-family:Arial",'Type a phrase here'), value = '', width = '600px'))),
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:20px;"))),
                                 fluidRow(column(12, align="center",
-                                        div(style = "; font-family:Arial; font-size:16px; color:#8597AB; padding:20px;","Top predicted next word :"))),
+                                        div(style = "; font-family:Arial; font-size:16px; color:#8597AB; padding:20px;","Top predicted next word"))),
                                 #fluidRow(column(12, align="center", textOutput('predict')))
                                 fluidRow(column(12, align="center",
                                         div(style = "font-weight:bold; font-size:22px; color:#2471A3; font-family:Segoe UI", 
                                                 textOutput("predict")))),
                                 fluidRow(column(12, align="center",
-                                        h4(" ", style="padding:80px;"))),
+                                        h4(" ", style="padding:60px;"))),
                                 fluidRow(column(width = 12, align="center", style="padding:1px",
-                                        div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
+                                        div(style = "font-weight:normal; font-size:12px; font-family:Segoe UI", 
                                                 'Created by :'))),
                                 fluidRow(column(width = 12, align="center", style="padding:1px",
                                         div(
-                                                tags$a(style = "font-weight:normal; font-size:10px; font-family:Segoe UI; color:#3681DA",
+                                                tags$a(style = "font-weight:normal; font-size:12px; font-family:Segoe UI; color:#3681DA",
                                                         href = 'https://www.linkedin.com/in/grejell-segura-13009a15/','Grejell B. Segura')))),
                                 fluidRow(column(12, align="center",
-                                        h4(" ", style="padding:5px;"))),
-                                fluidRow(column(width = 12, align="center", style="padding:1px",
-                                        div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
-                                                'Powered by :'))),
-                                fluidRow(column(12, align="center",
-                                        img(src='tools.png', align='center', width = 150, height = 47)))
-                                ),  #this closes the tabPanel1
+                                        h4(" ", style="padding:5px;")))
+                                ),
+#                                fluidRow(column(width = 12, align="center", style="padding:1px",
+#                                        div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
+#                                                'Powered by :'))),
+#                                fluidRow(column(12, align="center",
+#                                        img(src='toolsv2.png', align='center', width = 200, height = 62.7)))
+#                                ),  #this closes the tabPanel1
                         tabPanel(div(style = "font-family:Segoe UI; font-weight:normal; font-size:12px; color:#2471A3", 'About the App'),
                                 fluidRow(column(12, align="center", style="padding:10px;",
                                         img(src='logo_v2.png', align='center', width = 400, height = 127.8))),

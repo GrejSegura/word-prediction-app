@@ -13,7 +13,7 @@ ui <- shinyUI(
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:40px;"))),
                                 fluidRow(column(12, align="center",
-                                        img(src='logo.png', align='center', width = 450, height = 169))),
+                                        img(src='logo_v2.png', align='center', width = 450, height = 143.77))),
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:30px;"))),
                                 fluidRow(column(12, align="center",
@@ -43,11 +43,11 @@ ui <- shinyUI(
                                         div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
                                                 'Powered by :'))),
                                 fluidRow(column(12, align="center",
-                                        img(src='rstudio.png', align='center', width = 80, height = 28)))
+                                        img(src='tools.png', align='center', width = 150, height = 47)))
                                 ),  #this closes the tabPanel1
                         tabPanel(div(style = "font-family:Segoe UI; font-weight:normal; font-size:12px; color:#2471A3", 'About the App'),
                                 fluidRow(column(12, align="center", style="padding:10px;",
-                                        img(src='logo.png', align='center', width = 400, height = 150))),
+                                        img(src='logo_v2.png', align='center', width = 400, height = 127.8))),
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:10px;"))),
                                         tabContent # function located in tabPanel2Content.R

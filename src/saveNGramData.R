@@ -1,5 +1,5 @@
 # Saves a corpus of n-grams using the function created in 3_createNGramData.R
-if(!file.exists("./dta/nGramData.csv") | !file.exists("./dta/unigram.RData")){
+if(!file.exists("./dta/nGramData.RData") | !file.exists("./dta/unigram.RData")){
         source("./src/preprocess.R")
         source("./src/replaceText.R")
         source("./src/createNGramData.R")
@@ -23,5 +23,5 @@ if(!file.exists("./dta/nGramData.csv") | !file.exists("./dta/unigram.RData")){
         nGramData <- nGramData[count > 4,]
         nGramData <- nGramData[, count := NULL]
         
-        fwrite(nGramData, './dta/nGramData.csv')
+        save(nGramData, file = './dta/nGramData.RData')
 } else {print('File already loaded!')}

@@ -3,7 +3,7 @@ source("./src/replaceText.R")
 source("./src/tabPanel2Content.R")
 
 
-nGramData <- fread('./dta/nGramData.csv')
+nGramData <- setDT(readRDS('./dta/nGramData.RData'))
 unigramData <- readRDS('./dta/unigram.RData')
 
 ui <- shinyUI(

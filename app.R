@@ -83,7 +83,7 @@ server <- shinyServer(function(input, output){
                                         setOfNextWord <- nGramData[nGramData$typedWord %in% lastWords, ]
                                         countWords <- setOfNextWord %>% group_by(nextWord) %>% 
                                                 summarise(frequency = n()) %>% arrange(desc(frequency)) %>% top_n(n = 5, wt = frequency) %>%
-                                                mutate(score = ((0.4^((numberWords+1)-i))*frequency)/nrow(setOfNextWord))
+                                                mutate(score = ((0.4^((numberWords+1)-i))*frequency)/nrow(setOfNextWord)) # stupid backoff scoring
                                         scoreTable <- as.data.frame(rbind(scoreTable, countWords))
                                         scoreTable <- scoreTable %>% top_n(n = 5, wt = score)
                                         scoreTable <- scoreTable[!(is.na(scoreTable$nextWord)),]

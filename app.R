@@ -61,6 +61,7 @@ ui <- shinyUI(
 ##################################################################################################################################
 ##################################################################################################################################
 
+# https://stackoverflow.com/questions/36379112/in-shiny-how-can-i-update-an-input-text-field-with-the-value-of-an-action-button
 
 server <- shinyServer(function(input, output){
                 output$predict <- renderText({

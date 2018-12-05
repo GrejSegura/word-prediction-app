@@ -12,6 +12,9 @@ tabContent <- fluidRow(column(width = 6, offset = 3, align="justified",
                                 The user may choose one of the words as the next word for the phrase or may type any other word.
                                 The process continues as long as the user wants.'),
                            p(style = 'margin: 25px 25px 25px 25px',
+                                'In general, this app can be used as a backend for an application that requires 
+                                composition of words such as emails, SMS, comments or during a chat.'),
+                           p(style = 'margin: 25px 25px 25px 25px',
                                 'An overview of this particular course is stated below.'),
                            p(style = 'margin: 25px 25px 25px 25px', 'Source: www.coursera.org'),
                            p(style = 'margin: 25px 25px 25px 25px', 

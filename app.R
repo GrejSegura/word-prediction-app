@@ -14,7 +14,7 @@ ui <- shinyUI(
                                         h4(" ", style="padding:40px; display: block; margin-left: auto; margin-right: auto"))),
                                 fluidRow(column(12, align="center",
                                         img(style="display: block; margin-left: auto; margin-right: auto", src='logo_v2.png', 
-                                            width = 450, height = 143.77))),
+                                            width = 400, height = 127.8))),
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:30px;"))),
                                 fluidRow(column(12, align="center",

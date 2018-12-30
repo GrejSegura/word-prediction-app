@@ -5,8 +5,8 @@ account: grejsegura
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 594085
-bundleId: 1789176
+bundleId: 1789199
 url: https://grejsegura.shinyapps.io/wordPredictionApp/
-when: 1546157350.19425
+when: 1546160268.97728
 asMultiple: FALSE
 asStatic: FALSE

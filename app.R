@@ -11,9 +11,9 @@ ui <- shinyUI(
                 tabsetPanel(
                         tabPanel(div(style = "font-weight:normal; font-size:12px; color:#2471A3", 'Home'),
                                 fluidRow(column(12, align="center",
-                                        h4(" ", style="padding:40px;"))),
+                                        h4(" ", style="padding:40px; display: block; margin-left: auto; margin-right: auto"))),
                                 fluidRow(column(12, align="center",
-                                        img(style="display: block; margin-left: auto; margin-right: auto;", src='logo_v2.png', 
+                                        img(style="display: block; margin-left: auto; margin-right: auto", src='logo_v2.png', 
                                             width = 450, height = 143.77))),
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:30px;"))),
@@ -24,7 +24,8 @@ ui <- shinyUI(
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:20px;"))),
                                 fluidRow(column(12, align="center",
-                                        div(style = "; font-family:Arial; font-size:16px; color:#8597AB; padding:20px;","Top predicted next word"))),
+                                        div(style = "font-weight: normal; font-family:Arial; font-size:16px; color:#8597AB;
+                                            padding:20px;","Top predicted next word"))),
                                 fluidRow(column(12, align="center",
                                         div(style = "font-weight:bold; font-size:22px; color:#2471A3; font-family:Segoe UI", 
                                                 textOutput("predict")))),

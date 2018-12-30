@@ -13,7 +13,8 @@ ui <- shinyUI(
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:40px;"))),
                                 fluidRow(column(12, align="center",
-                                        img(src='logo_v2.png', align='center', width = 450, height = 143.77))),
+                                        img(style="display: block; margin-left: auto; margin-right: auto;", src='logo_v2.png', 
+                                            width = 450, height = 143.77))),
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:30px;"))),
                                 fluidRow(column(12, align="center",
@@ -24,7 +25,6 @@ ui <- shinyUI(
                                         h4(" ", style="padding:20px;"))),
                                 fluidRow(column(12, align="center",
                                         div(style = "; font-family:Arial; font-size:16px; color:#8597AB; padding:20px;","Top predicted next word"))),
-                                #fluidRow(column(12, align="center", textOutput('predict')))
                                 fluidRow(column(12, align="center",
                                         div(style = "font-weight:bold; font-size:22px; color:#2471A3; font-family:Segoe UI", 
                                                 textOutput("predict")))),
@@ -40,12 +40,6 @@ ui <- shinyUI(
                                 fluidRow(column(12, align="center",
                                         h4(" ", style="padding:5px;")))
                                 ),
-#                                fluidRow(column(width = 12, align="center", style="padding:1px",
-#                                        div(style = "font-weight:normal; font-size:10px; font-family:Segoe UI", 
-#                                                'Powered by :'))),
-#                                fluidRow(column(12, align="center",
-#                                        img(src='toolsv2.png', align='center', width = 200, height = 62.7)))
-#                                ),  #this closes the tabPanel1
                         tabPanel(div(style = "font-family:Segoe UI; font-weight:normal; font-size:12px; color:#2471A3", 'About the App'),
                                 fluidRow(column(12, align="center", style="padding:10px;",
                                         img(src='logo_v2.png', align='center', width = 400, height = 127.8))),
@@ -91,9 +85,9 @@ server <- shinyServer(function(input, output){
                                         if (nrow(scoreTable) < 5){
                                                 addUniGram <- as.data.frame(unigramData[1:(5-nrow(scoreTable)), c('nextWord')])
                                                 scoreTable <- as.data.frame(full_join(scoreTable, addUniGram, by = 'nextWord'))
-                                                return(as.character(unlist(scoreTable[1:5, c('nextWord')]))) #return the top 3 words
+                                                return(as.character(unlist(scoreTable[1:3, c('nextWord')]))) #return the top 3 words
                                         }
-                                        return(as.character(unlist(scoreTable[1:5, c('nextWord')]))) #return the top 3 words
+                                        return(as.character(unlist(scoreTable[1:3, c('nextWord')]))) #return the top 3 words
                                 }
                         }
                 })

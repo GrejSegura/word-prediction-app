@@ -1,5 +1,4 @@
-# wordPredictionApp
-Coursera Data Science Specialization Capstone Project
+### Coursera Data Science Specialization Capstone Project
 
 #### To run this program locally, clone this repository in your local desktop.
 #### In R terminal, set the cloned folder location as the new working directory.

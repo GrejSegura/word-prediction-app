@@ -10,6 +10,6 @@
   > source('app.R')
 
 ##### See the interface pictured below.
-<a href="url"><img src="https://media.giphy.com/media/2dcVPVagskSVmeWAXV/giphy.gif" align="center" height="60" width="100" ></a>
+<a href="url"><img src="https://media.giphy.com/media/2dcVPVagskSVmeWAXV/giphy.gif" align="center" height="200" width="300" ></a>
 
 #![alt text](https://media.giphy.com/media/2dcVPVagskSVmeWAXV/giphy.gif)

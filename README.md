@@ -10,4 +10,4 @@
   > source('app.R')
 
 ##### See the interface pictured below.
-![alt text](https://raw.githubusercontent.com/GrejSegura/word-prediction-app/master/www/interface.PNG)
+![alt text](https://media.giphy.com/media/2dcVPVagskSVmeWAXV/giphy.gif)

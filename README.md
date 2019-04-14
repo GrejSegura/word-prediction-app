@@ -8,7 +8,8 @@
 #### This will download and pre-process the data.
 #### Once done, you can then run app.R script.
   > source('app.R')
-
-##### See the interface pictured below.
+#### You are all set. Enjoy!
+####
+#### See the interface below.
 <a href="url"><img src="https://j.gifs.com/WLPgR4.gif" align="center" height="380" width="700" ></a>
 

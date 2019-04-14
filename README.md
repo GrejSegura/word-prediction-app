@@ -10,5 +10,5 @@
   > source('app.R')
 
 ##### See the interface pictured below.
-<a href="url"><img src="https://j.gifs.com/p8ZOPX.gif" align="center" height="380" width="700" ></a>
+<a href="url"><img src="https://j.gifs.com/WLPgR4.gif" align="center" height="380" width="700" ></a>
 

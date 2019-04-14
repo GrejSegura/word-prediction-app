@@ -8,3 +8,6 @@
 #### This will download and pre-process the data.
 #### Once done, you can then run app.R script.
   > source('app.R')
+
+##### See the interface pictured below.
+![alt text](https://raw.githubusercontent.com/GrejSegura/word-prediction-app/master/www/interface.PNG)

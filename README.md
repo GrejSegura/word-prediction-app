@@ -1,3 +1,6 @@
+![alt text](https://raw.githubusercontent.com/GrejSegura/word-prediction-app/master/www/logo_v2.png)
+
+
 ### Coursera Data Science Specialization Capstone Project
 
 #### To run this program locally, clone this repository in your local desktop.

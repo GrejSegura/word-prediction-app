@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/GrejSegura/word-prediction-app/master/www/logo_v2.png)
+<img src="https://raw.githubusercontent.com/GrejSegura/word-prediction-app/master/www/logo_v2.png" width="700">
 
 
 ### Coursera Data Science Specialization Capstone Project

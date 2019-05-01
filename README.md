@@ -1,4 +1,4 @@
-![]("https://raw.githubusercontent.com/GrejSegura/word-prediction-app/master/www/logo_v2.png")
+![](https://raw.githubusercontent.com/GrejSegura/word-prediction-app/master/www/logo_v2.png)
 
 
 ### Coursera Data Science Specialization Capstone Project
